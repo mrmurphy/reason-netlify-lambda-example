@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "clean": "bsb -clean-world",
-    "build": "bsb -make-world && netlify-lambda build src/functions",
+    "build": "mkdir -p build && cp src/index.html build/index.html && bsb -make-world && netlify-lambda build src/functions",
     "watch": "bsb -make-world -w",
     "serve": "netlify deploy"
   },
